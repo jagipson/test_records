@@ -1,4 +1,6 @@
 G4::Application.routes.draw do
+  resources :statuses do as_routes end
+
   resources :models do as_routes end
 
   # The priority is based upon order of creation:
