@@ -1,4 +1,6 @@
 G4::Application.routes.draw do
+  resources :procedure_definitions do as_routes end
+
   resources :statuses do as_routes end
 
   resources :models do as_routes end
