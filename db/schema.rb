@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120108180542) do
+ActiveRecord::Schema.define(:version => 20120110011902) do
 
   create_table "models", :force => true do |t|
     t.string   "name"
@@ -26,6 +26,9 @@ ActiveRecord::Schema.define(:version => 20120108180542) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "version",        :default => 0, :null => false
+    t.text     "procedure"
+    t.integer  "new_version_id"
   end
 
   create_table "statuses", :force => true do |t|

@@ -29,14 +29,16 @@ class ProcedureDefinitionsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get edit" do
-    get :edit, id: @procedure_definition.to_param
-    assert_response :success
+  test "should not get edit" do
+    assert_raise AbstractController::ActionNotFound do
+      get :edit, id: @procedure_definition.to_param
+    end
   end
 
-  test "should update procedure_definition" do
-    put :update, id: @procedure_definition.to_param, record: @procedure_definition.attributes
-    assert_redirected_to procedure_definitions_path
+  test "should not update procedure_definition" do
+    assert_raise ActionView::Template::Error do
+      put :update, id: @procedure_definition.to_param, record: @procedure_definition.attributes
+    end
   end
 
   test "should destroy procedure_definition" do
