@@ -1,7 +1,31 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: "MyString"
+  name: "procedure one"
+  procedure: "This is a test fixture"
+  version: 0
+  new_version: nil
+
+three:
+  name: "procedure three"
+  procedure: "This is a test fixture"
+  version: 0
+  new_version: nil
+
+twoA1:
+  name: "procedure twoA1"
+  procedure: "This is a test fixture"
+  version: 0
+  new_version: nil
+
+twoA:
+  name: "procedure twoA"
+  procedure: "This is a test fixture"
+  version: 0
+  new_version: twoA1
 
 two:
-  name: "MyString"
+  name: "procedure two"
+  procedure: "This is a test fixture"
+  version: 0
+  new_version: twoA
