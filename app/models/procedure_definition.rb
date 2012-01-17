@@ -9,7 +9,7 @@ class ProcedureDefinition < ActiveRecord::Base
 
   belongs_to :new_version, :class_name => "ProcedureDefinition" 
 
-  attr_readonly :name, :version, :procedure, :new_version
+  attr_readonly :name, :version, :procedure
 
   # We want to override save to change what it does. before saving,
   # create a duplicate, save it instead, then update the new_version field
